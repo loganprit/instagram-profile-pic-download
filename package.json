@@ -1,0 +1,23 @@
+{
+  "name": "instagram-profile-pic",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/bun": "latest",
+    "@types/node": "^22.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "clipboardy": "^4.0.0",
+    "playwright": "^1.49.0",
+    "robotjs": "^0.6.0"
+  },
+  "scripts": {      
+    "start": "node --loader ts-node/esm index.ts"
+  }
+}
