@@ -108,7 +108,7 @@ async function downloadInstagramProfilePicture(
         logger.info("Image opened successfully"); */
 
         // Cooldown
-        await new Promise(resolve => setTimeout(resolve, 20000));
+        // await new Promise(resolve => setTimeout(resolve, 20000));
 
         // Open the Shortcuts app (because this will be automated)
         await launchMacOSApp("/System/Applications/Shortcuts.app");

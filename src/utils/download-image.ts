@@ -26,17 +26,23 @@ async function downloadImage(): Promise<void> {
         // Wait for download button to be available
         await new Promise(resolve => setTimeout(resolve, 1000));
 
-        // Tab to the download button (3 tabs from the input field in save-free, 4 in new version)
+        // Tab to the download button (3 tabs from the input field in save-free, 4 in inflact, 1 in simpliers)
         if (config.downloaderUrl === "https://save-free.com/profile-downloader") {
             for (let i = 0; i < 3; i++) {
                 robot.keyTap("tab");
                 logger.debug(`Tab press ${i + 1}/3`);
                 await new Promise(resolve => setTimeout(resolve, 10));
             }
-        } else {
+        } else if (config.downloaderUrl === "https://inflact.com/downloader/instagram/avatar/") {
             for (let i = 0; i < 4; i++) {
                 robot.keyTap("tab");
                 logger.debug(`Tab press ${i + 1}/4`);
+                await new Promise(resolve => setTimeout(resolve, 10));
+            }
+        } else {
+            for (let i = 0; i < 1; i++) {
+                robot.keyTap("tab");
+                logger.debug(`Tab press ${i + 1}/1`);
                 await new Promise(resolve => setTimeout(resolve, 10));
             }
         }

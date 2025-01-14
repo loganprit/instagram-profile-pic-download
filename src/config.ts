@@ -9,17 +9,18 @@ const __dirname = path.dirname(__filename);
 const imagesDir = path.join(__dirname, "images");
 
 // Pick downloader URL at random
+// Inflact and simpliers currently not working "https://inflact.com/downloader/instagram/avatar/" "https://simpliers.com/en/tools/profile-picture"
 const downloaderUrls = [
     "https://save-free.com/profile-downloader",
-    "https://inflact.com/downloader/instagram/avatar/"
 ];
 const downloaderUrl = downloaderUrls[Math.floor(Math.random() * downloaderUrls.length)];
 
 // Pick browser path at random
 const browserPaths = [
     "/Applications/Firefox.app",
-    "/Applications/Safari.app",
-    "/Applications/Brave Browser.app"
+    "/Applications/Brave Browser.app",
+    "/Applications/Google Chrome.app",
+    "/Applications/Microsoft Edge.app"
 ];
 const browserPath = browserPaths[Math.floor(Math.random() * browserPaths.length)];
 
